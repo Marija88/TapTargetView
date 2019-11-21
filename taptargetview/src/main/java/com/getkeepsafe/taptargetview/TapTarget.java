@@ -44,6 +44,7 @@ public class TapTarget {
   @Nullable
   final CharSequence description;
 
+  float dimColorOpacity = 0.3f;
   float outerCircleAlpha = 0.96f;
   int targetRadius = 44;
 
@@ -371,6 +372,10 @@ public class TapTarget {
     return this;
   }
 
+   public TapTarget dimColorOpacity(float opacity){
+    this.dimColorOpacity = opacity;
+    return this;
+  }
   /** Specify whether or not to draw a drop shadow around the outer circle **/
   public TapTarget drawShadow(boolean draw) {
     this.drawShadow = draw;
